@@ -172,7 +172,9 @@ int TokenEdit::maxLineCount() const { return _maxLineCount; }
 
 void TokenEdit::setMaxLineCount(int count) {
   _maxLineCount = count;
-  _activeMode->invalidate();
+  if (_activeMode != nullptr) {
+    _activeMode->invalidate();
+  }
   updateHeight();
 }
 
@@ -217,7 +219,9 @@ void TokenEdit::setRemovable(bool enable) {
 
   emit removableStateChanged(enable);
 
-  _activeMode->invalidate();
+  if (_activeMode != nullptr) {
+    _activeMode->invalidate();
+  }
   updateHeight();
 }
 
