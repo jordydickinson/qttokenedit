@@ -155,6 +155,7 @@ TokenEdit::TokenEdit(QWidget* parent)
   connect(_lineEdit, &TokenLineEdit::backspaceAtBeginning, [=]() {
     if (_model && !_view->isEmpty() && removable()) {
       this->remove(_view->count() - 1, UpdateFocus::No);
+      _lineEdit->setFocus();
     }
   });
 
