@@ -536,10 +536,6 @@ void TokenEdit::updateHeight() {
 }
 
 void TokenEdit::updateDefaultFinalWidget() {
-  if (!_model) {
-    return;
-  }
-
   auto finalWidget = static_cast<QWidget*>(_placeholder);
 
   if (_showLineEdit == ShowLineEdit::Always) {
