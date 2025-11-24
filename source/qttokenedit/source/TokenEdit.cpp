@@ -165,6 +165,7 @@ TokenEdit::TokenEdit(QWidget* parent)
 }
 
 TokenEdit::~TokenEdit() {
+  removeEventFilter(_selectionHandler);
   disconnect(qApp, &QApplication::focusChanged, this,
              &TokenEdit::onFocusChanged);
 }
