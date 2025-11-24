@@ -506,7 +506,7 @@ void TokenEdit::setNextActiveMode(TokenEditMode* mode) {
 }
 
 void TokenEdit::updateActiveMode() {
-  if (_nextActiveMode && !_modeChangedBlocked) {
+  if (!_modeChangedBlocked) {
     setActiveMode(_nextActiveMode);
     _nextActiveMode = nullptr;
   }
