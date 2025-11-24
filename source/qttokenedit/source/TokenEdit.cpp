@@ -532,9 +532,7 @@ void TokenEdit::updateHeight() {
   auto height = _activeMode ? _activeMode->heightHint()
                             : view()->heightForWidth(view()->width());
 
-  if (_scrollArea->height() != height) {
-    _scrollArea->setFixedHeight(height);
-  }
+  _scrollArea->setFixedHeight(height);
 }
 
 void TokenEdit::updateDefaultFinalWidget() {
